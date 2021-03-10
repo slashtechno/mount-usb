@@ -1,0 +1,7 @@
+#!/bin/bash
+git clone https://github.com/slashtechno/MountUSB.git
+cd MountUSB
+sudo mv mountUSB //bin
+sudo chmod +x //bin/mountUSB
+cd ..
+rm -r MountUSB
