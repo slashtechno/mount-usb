@@ -7,6 +7,6 @@ os.system("clear")
 os.system("ls //media/"+user)
 mountPoint=input("Mount Point?")
 mountPoint = "/media/"+user + "/" + mountPoint
-command = "sudo mount "+ drive + " " + mountPoint + " -o uid="+user",gid=pi"
+command = "sudo mount "+ drive + " " + mountPoint + " -o uid="+user+",gid="+user
 print(command)
 os.system(command)
