@@ -21,6 +21,7 @@ while True:
 		command="sudo ls /media/"+user
 		os.system(command)
 		eject=input("What mount to eject?")
+		del command
 		command="sudo umount //media/"+user+"/"+eject
 		os.system(command)
 	if function == 3:
@@ -33,6 +34,7 @@ while True:
 		command = "sudo ls /media/" + user
 		os.system(command)
 		folderToRM=input("which one to remove?")
+		del command
 		command="sudo rm -r //media/" + user + "/" + folderToRM
 		del folderToRM
 		os.system(command)
@@ -45,6 +47,7 @@ while True:
 		exit()
 	if function == 7:
 		exit()
+	del command
 	command="clear"
 	os.system=(command)
 	del command
