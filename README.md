@@ -1,5 +1,5 @@
 # MountUSB
-Mount USB on Linux automatically
+Mount USB drives on Linux automatically, eject drives, manage mount points.
 
 
 ### To install
