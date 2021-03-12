@@ -2,7 +2,6 @@
 import os
 user=os.getenv("USER")
 while True:
-	user=os.getenv("USER")
 	function=input("Do you want to\n1.Mount drive\n2.Eject Drive\n3.Add mount point\n4.Remove mount point\n5.List mount points\n6.Update\n7.Exit\nA mount point is where you mount a drive, create one if there are none\n") 
 	function=int(function)
 	if function == 1:
@@ -21,23 +20,17 @@ while True:
 		command="sudo ls /media/"+user
 		os.system(command)
 		eject=input("What mount to eject?")
-		del command
 		command="sudo umount //media/"+user+"/"+eject
 		os.system(command)
 	if function == 3:
 		newMountPoint=input("What do you want the name of the new mount point to be?")
 		command="sudo mkdir //media/" +user+ "/"+ newMountPoint 
 		print(command)
-		del command
 		os.system(command)
-		del newMountPoint		
 	if function == 4:
 		command = "sudo ls /media/" + user
-		os.system(command)
 		folderToRM=input("which one to remove?")
-		del command
 		command="sudo rm -r //media/" + user + "/" + folderToRM
-		del folderToRM
 		os.system(command)
 	if function == 5:
 		command= "sudo ls /media/" + user
@@ -48,8 +41,5 @@ while True:
 		exit()
 	if function == 7:
 		exit()
-	del command
 	command="clear"
-	os.system=(command)
-	del command
-	del user
+	os.system(command)
