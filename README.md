@@ -20,3 +20,4 @@ Mount USB on Linux automatically
 - [X] Allow Unmounting
 - [ ] Create GUI (Long term goal, I am still learning GUIs)
 - [X] Add update script
+- [ ] After running function, clear shell
