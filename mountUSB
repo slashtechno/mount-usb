@@ -39,7 +39,6 @@ while True:
 		del folderToRM
 		os.system(command)
 	if function == 5:
-		del command
 		command= "sudo ls /media/" + user
 		os.system(command)
 	if function == 6:
