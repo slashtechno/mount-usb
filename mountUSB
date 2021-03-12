@@ -36,7 +36,7 @@ while True:
 		command="sudo ls /media/"+user
 		os.system(command)
 		folderToRM=input("which one to remove?")
-		command="sudo rm -r //media/"+user+"/"+folderToRM
+		command="sudo rm -r //media/" + user + "/" + folderToRM
 		os.system(command)
 	if function == 5:
 		command= "null" #put this here to fix TypeError: 'str' object is not callable
