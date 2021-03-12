@@ -19,4 +19,4 @@ Mount USB on Linux automatically
 - [X] Create Mount Point Creation
 - [X] Allow Unmounting
 - [ ] Create GUI (Long term goal, I am still learning GUIs)
-- [ ] Add update script
+- [X] Add update script
