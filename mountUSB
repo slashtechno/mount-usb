@@ -16,6 +16,7 @@ while True:
 		print(command)
 		os.system(command)
 	if function == 2:
+		user=str(user)
 		os.system("sudo ls /media/"+user)
 		eject=input("What mount to eject?")
 		command="sudo umount //media/"+user+"/"+eject
