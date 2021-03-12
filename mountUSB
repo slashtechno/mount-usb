@@ -2,12 +2,11 @@
 import os
 user=os.getenv("USER")
 while True:
-	str=0
+	del str
 	user=os.getenv("USER")
 	function=input("Do you want to\n1.Mount drive\n2.Eject Drive\n3.Add mount point\n4.Remove mount point\n5.List mount points\n6.Update\n7.Exit\nA mount point is where you mount a drive, create one if there are none\n") 
 	function=int(function)
 	if function == 1:
-		command="null" #put this here to fix TypeError: 'str' object is not callable
 		command="sudo fdisk -l"
 		os.system(command)
 		drive=input("drive? \n")
@@ -20,31 +19,26 @@ while True:
 		print(command)
 		os.system(command)
 	if function == 2:
-		command="null" #put this here to fix TypeError: 'str' object is not callable		
 		command="sudo ls /media/"+user
 		os.system(command)
 		eject=input("What mount to eject?")
 		command="sudo umount //media/"+user+"/"+eject
 		os.system(command)
 	if function == 3:
-		command="null" #put this here to fix TypeError: 'str' object is not callable		
 		newMountPoint=input("What do you want the name of the new mount point to be?")
 		command="sudo mkdir //media/" +user+ "/"+ newMountPoint 
 		print(command)
 		os.system(command)
 	if function == 4:
-		command = "null" #put this here to fix TypeError: 'str' object is not callable
 		command = "sudo ls /media/" + user
 		os.system(command)
 		folderToRM=input("which one to remove?")
 		command="sudo rm -r //media/" + user + "/" + folderToRM
 		os.system(command)
 	if function == 5:
-		command= "null" #put this here to fix TypeError: 'str' object is not callable
 		command= "sudo ls /media/" + user
 		os.system(command)
 	if function == 6:
-		command="null" #put this here to fix TypeError: 'str' object is not callable		
 		command="wget -qO- https://raw.githubusercontent.com/slashtechno/MountUSB/main/update | bash"
 		os.system(command)
 		exit()
