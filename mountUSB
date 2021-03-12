@@ -5,7 +5,8 @@ while True:
 	function=input("Do you want to\n1.Mount drive\n2.Eject Drive\n3.Add mount point\n4.Remove mount point\n5.List mount points\n6.Update\n7.Exit\nA mount point is where you mount a drive, create one if there are none\n") 
 	function=int(function)
 	if function == 1:
-		os.system("sudo fdisk -l")
+		command="sudo fdisk -l"
+		os.system(command)
 		drive=input("drive? \n")
 		os.system("clear")
 		print("Exit the program (control+c) if they are no mount points listed below:\n")
@@ -16,8 +17,8 @@ while True:
 		print(command)
 		os.system(command)
 	if function == 2:
-		user=str(user)
-		os.system("sudo ls /media/"+user)
+		command="sudo ls /media/"+user
+		os.system(command)
 		eject=input("What mount to eject?")
 		command="sudo umount //media/"+user+"/"+eject
 		os.system(command)
@@ -25,11 +26,10 @@ while True:
 		newMountPoint=input("What do you want the name of the new mount point to be?")
 		command="sudo mkdir //media/"+user+"/"+newMountPoint
 		print(command)
-		newMountPoint=str(newMountPoint)
 		os.system("sudo mkdir //media/"+user+"/"+newMountPoint)
 	if function == 4:
-		user=str(user)
-		os.system("sudo ls /media/"+user)
+		command="sudo ls /media/"+user
+		os.system(command)
 		folderToRM=input("which one to remove?")
 		command="sudo rm -r //media/"+user+"/"+folderToRM
 		os.system(command)
@@ -38,7 +38,6 @@ while True:
 		os.system(command)
 	if function == 6:
 		command="wget -qO- https://raw.githubusercontent.com/slashtechno/MountUSB/main/update | bash"
-		command=str(command)
 		os.system(command)
 		exit()
 	if function == 7:
