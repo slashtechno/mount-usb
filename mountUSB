@@ -1,32 +1,41 @@
 #!/bin/python3
 import os
 user=os.getenv('USER')
-function=input("Do you want to\n1.Mount drive\n2.Eject Drive\n3.Add mount point\n4.Remove mount point\n5.List mount points\nA mount point is where you mount a drive\n") 
-function=int(function)
-if function == 1:
-    os.system("sudo fdisk -l")
-    drive=input("drive? \n")
-    os.system("clear")
-    os.system("ls //media/"+user)
-    mountPoint=input("Mount Point?")
-    mountPoint = "/media/"+user + "/" + mountPoint
-    command = "sudo mount "+ drive + " " + mountPoint + " -o uid="+user+",gid="+user
-    print(command)
-    os.system(command)
-if function == 2:
-    os.system("sudo ls /media/"+user)
-    eject=input("What mount to eject?")
-    command="sudo umount //media/"+user+"/"+eject
-    os.system(command)
-if function == 3:
-    newMountPoint=input("What do you want the name of the new mount point to be?")
-    command="sudo mkdir //media/"+user+"/"+newMountPoint
-    print(command)
-    os.system("sudo mkdir //media/"+user+"/"+newMountPoint)
-if function == 4:
-    os.system("sudo ls /media/"+user)
-    folderToRM=input("which one to remove?")
-    command="sudo rm -r //media/"+user+"/"+folderToRM
-    os.system(command)
-if function == 5:
-    os.system("sudo ls /media/"+user)
+while True:
+    function=input("Do you want to\n1.Mount drive\n2.Eject Drive\n3.Add mount point\n4.Remove mount point\n5.List mount points\n6.Update\n7.Exit\nA mount point is where you mount a drive, create one if there are none\n") 
+    function=int(function)
+    if function == 1:
+        os.system("sudo fdisk -l")
+        drive=input("drive? \n")
+        os.system("clear")
+        os.system("ls //media/"+user)
+        mountPoint=input("Mount Point?")
+        mountPoint = "/media/"+user + "/" + mountPoint
+        command = "sudo mount "+ drive + " " + mountPoint + " -o uid="+user+",gid="+user
+        print(command)
+        os.system(command)
+    if function == 2:
+        os.system("sudo ls /media/"+user)
+        eject=input("What mount to eject?")
+        command="sudo umount //media/"+user+"/"+eject
+        os.system(command)
+    if function == 3:
+        newMountPoint=input("What do you want the name of the new mount point to be?")
+        command="sudo mkdir //media/"+user+"/"+newMountPoint
+        print(command)
+        os.system("sudo mkdir //media/"+user+"/"+newMountPoint)
+    if function == 4:
+        os.system("sudo ls /media/"+user)
+        folderToRM=input("which one to remove?")
+        command="sudo rm -r //media/"+user+"/"+folderToRM
+        os.system(command)
+    if function == 5:
+        command="sudo ls /media/"+user
+        os.system(command)
+    if function == 6:
+        command="wget -qO- https://raw.githubusercontent.com/slashtechno/MountUSB/main/update | bash"
+        exit()
+    if function == 7:
+        exit()
+    command="clear"
+    os.system=(command)
