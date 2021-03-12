@@ -1,8 +1,8 @@
 #!/bin/python3
 import os
-user=os.getenv('USER')
+user=os.getenv("USER")
 while True:
-	user=os.getenv('USER')
+	user=os.getenv("USER")
 	function=input("Do you want to\n1.Mount drive\n2.Eject Drive\n3.Add mount point\n4.Remove mount point\n5.List mount points\n6.Update\n7.Exit\nA mount point is where you mount a drive, create one if there are none\n") 
 	function=int(function)
 	if function == 1:
@@ -28,9 +28,9 @@ while True:
 	if function == 3:
 		command="null" #put this here to fix TypeError: 'str' object is not callable		
 		newMountPoint=input("What do you want the name of the new mount point to be?")
-		command="sudo mkdir //media/"+user+"/"+newMountPoint
+		command="sudo mkdir //media/" +user+ "/"+ newMountPoint 
 		print(command)
-		os.system("sudo mkdir //media/"+user+"/"+newMountPoint)
+		os.system(command)
 	if function == 4:
 		command="null" #put this here to fix TypeError: 'str' object is not callable
 		command="sudo ls /media/"+user
