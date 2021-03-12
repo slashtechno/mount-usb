@@ -31,7 +31,6 @@ while True:
 		os.system(command)
 		del newMountPoint		
 	if function == 4:
-		del command
 		command = "sudo ls /media/" + user
 		os.system(command)
 		folderToRM=input("which one to remove?")
