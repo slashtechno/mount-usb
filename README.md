@@ -14,3 +14,4 @@ Mount USB on Linux automatically
 ### To-Do
 - [ ] Create Mount Point Creation
 - [ ] Allow Unmounting
+- [ ] Create GUI (Long term goal, I am still learning GUIs)
