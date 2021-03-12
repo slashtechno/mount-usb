@@ -28,6 +28,7 @@ while True:
 		newMountPoint=input("What do you want the name of the new mount point to be?")
 		command="sudo mkdir //media/" +user+ "/"+ newMountPoint 
 		print(command)
+		del command
 		os.system(command)
 		del newMountPoint		
 	if function == 4:
