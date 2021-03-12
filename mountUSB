@@ -28,6 +28,7 @@ while True:
 		newMountPoint=str(newMountPoint)
 		os.system("sudo mkdir //media/"+user+"/"+newMountPoint)
 	if function == 4:
+		user=str(user)
 		os.system("sudo ls /media/"+user)
 		folderToRM=input("which one to remove?")
 		command="sudo rm -r //media/"+user+"/"+folderToRM
@@ -37,6 +38,7 @@ while True:
 		os.system(command)
 	if function == 6:
 		command="wget -qO- https://raw.githubusercontent.com/slashtechno/MountUSB/main/update | bash"
+		command=str(command)
 		os.system(command)
 		exit()
 	if function == 7:
