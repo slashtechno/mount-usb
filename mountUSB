@@ -8,6 +8,7 @@ while True:
 		os.system("sudo fdisk -l")
 		drive=input("drive? \n")
 		os.system("clear")
+		print("Exit the program (control+c) if they are no mount points listed below:\n")
 		os.system("ls //media/"+user)
 		mountPoint=input("Mount Point?")
 		mountPoint = "/media/"+user + "/" + mountPoint
