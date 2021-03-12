@@ -1,5 +1,3 @@
-Backup if I mess somthing up with the normal file.
-
 #!/bin/python3
 import os
 user=os.getenv('USER') 
