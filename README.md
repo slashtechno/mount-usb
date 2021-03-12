@@ -11,6 +11,10 @@ Mount USB on Linux automatically
 ### To uninstall
 `wget -qO- https://raw.githubusercontent.com/slashtechno/MountUSB/main/uninstall | bash`
 
+
+### To update
+`wget -qO- https://raw.githubusercontent.com/slashtechno/MountUSB/main/update | bash`
+
 ### To-Do
 - [X] Create Mount Point Creation
 - [X] Allow Unmounting
