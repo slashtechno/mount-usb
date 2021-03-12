@@ -25,6 +25,7 @@ while True:
 		newMountPoint=input("What do you want the name of the new mount point to be?")
 		command="sudo mkdir //media/"+user+"/"+newMountPoint
 		print(command)
+		newMountPoint=str(newMountPoint)
 		os.system("sudo mkdir //media/"+user+"/"+newMountPoint)
 	if function == 4:
 		os.system("sudo ls /media/"+user)
