@@ -2,7 +2,10 @@
 import os
 user=os.getenv("USER")
 while True:
-	del str
+	del command
+	del user
+	del newMountPoint
+	del folderToRM
 	user=os.getenv("USER")
 	function=input("Do you want to\n1.Mount drive\n2.Eject Drive\n3.Add mount point\n4.Remove mount point\n5.List mount points\n6.Update\n7.Exit\nA mount point is where you mount a drive, create one if there are none\n") 
 	function=int(function)
