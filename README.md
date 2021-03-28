@@ -19,4 +19,4 @@ Mount USB drives on Linux automatically, eject them and manage mount points easi
 - [X] Allow Unmounting
 - [ ] Create GUI (Long term goal, I am still learning GUIs)
 - [X] Add update script
-- [ ] After running function, clear shell
+- [X] After running function, clear shell
