@@ -16,30 +16,34 @@ while True:
 		command = "sudo mount "+ drive + " " + mountPoint + " -o uid="+user+",gid="+user
 		print(command)
 		os.system(command)
-	if function == 2:
+	elif function == 2:
 		command="sudo ls /media/"+user
 		os.system(command)
 		eject=input("What mount to eject?")
 		command="sudo umount //media/"+user+"/"+eject
 		os.system(command)
-	if function == 3:
+	elif function == 3:
 		newMountPoint=input("What do you want the name of the new mount point to be?")
 		command="sudo mkdir //media/" +user+ "/"+ newMountPoint 
 		print(command)
 		os.system(command)
-	if function == 4:
+	elif function == 4:
 		command = "sudo ls /media/" + user
 		folderToRM=input("which one to remove?")
 		command="sudo rm -r //media/" + user + "/" + folderToRM
 		os.system(command)
-	if function == 5:
+	elif function == 5:
 		command= "sudo ls /media/" + user
 		os.system(command)
-	if function == 6:
+	elif function == 6:
 		command="wget -qO- https://raw.githubusercontent.com/slashtechno/MountUSB/main/update | bash"
 		os.system(command)
 		exit()
 	if function == 7:
+		exit()
+	else:
+		print("You have not entered a valid input")
+		print("Exiting!")
 		exit()
 	command="clear"
 	os.system(command)
