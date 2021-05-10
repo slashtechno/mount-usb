@@ -1,7 +1,7 @@
 #!/bin/bash
-git clone https://github.com/slashtechno/MountUSB.git
-cd MountUSB
+git clone https://github.com/slashtechno/mount-USB.git
+cd mount-USB
 sudo mv mountUSB //bin
 sudo chmod +x //bin/mountUSB
 cd ..
-rm -r MountUSB
+rm -r mount-USB
