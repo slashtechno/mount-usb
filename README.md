@@ -1,6 +1,6 @@
 # MountUSB
-Mount USB drives on Linux automatically, eject them and manage mount points easily 
-
+Mount USB drives on Linux automatically, eject them and manage mount points easily   
+[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 ### To install
 `wget -qO- https://raw.githubusercontent.com/slashtechno/mount-usb/main/install | bash`
 
